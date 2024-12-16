@@ -3,7 +3,7 @@ import { headers } from 'next/headers'
 import { WebhookEvent } from '@clerk/nextjs/server'
 import { NextResponse } from 'next/server'
 import { clerkClient } from '@clerk/nextjs/server'
-import { Createuser } from '@/lib/actions/user.action'
+import { Createuser } from '@/lib/actions/user.actions'
 
 
 
@@ -55,22 +55,18 @@ export async function POST(req: Request) {
   const { id } = evt.data
   const eventType = evt.type
 
-  if (eventType == "user.created") {
-    console.log("User created")
-    
+  if(eventType === "user.created"){
+    const{id,email_addresses, image_url,first_name,last_name, username } = 
+    evt.data;
+    await Createuser({
+      clerkId:id,
+      username:username || "MyUser",
+      email:email_addresses[0].email_address,
+      photo:image_url,
+      firstName:first_name,
+      lastName:last_name
+    });
   }
-  if (eventType == "user.updated") {
-    console.log("User Updated")
-    
-  }
-  if (eventType == "user.deleted") {
-    console.log("User deleted")
-    
-  }
-  
-  
-
-
   console.log(`Received webhook with ID ${id} and event type of ${eventType}`)
   console.log('Webhook payload:', body)
 
