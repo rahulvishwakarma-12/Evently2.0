@@ -2,14 +2,9 @@ import EventForm from "@/components/shared/EventForm";
 import { auth } from "@clerk/nextjs/server";
 
 const CreateEvent = () => {
-<<<<<<< HEAD
-
-  const userId = "67614bc8ac89c19627aec41a"
-=======
   
-  const userId = "kdasjfkdh"
->>>>>>> parent of efce72c (version 1.4)
- 
+  const userId = "67614bc8ac89c19627aec41a"
+
   return (
     <>
       <section className="bg-primary-50 bg-dotted-pattern bg-cover bg-center py-5 md:py-10">
