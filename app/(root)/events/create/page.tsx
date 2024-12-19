@@ -1,18 +1,10 @@
 import EventForm from "@/components/shared/EventForm";
 import { auth } from "@clerk/nextjs/server";
 
-<<<<<<< HEAD
 const CreateEvent = () => {
   
   const userId = "67614bc8ac89c19627aec41a"
  
-=======
-const CreateEvent = async () => { // [1]
-  const { sessionClaims } = await auth(); // [1]
-
-  const userId = sessionClaims?.userId as string;
-
->>>>>>> parent of 38dd98c (Version 1)
   return (
     <>
       <section className="bg-primary-50 bg-dotted-pattern bg-cover bg-center py-5 md:py-10">
