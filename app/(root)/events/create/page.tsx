@@ -3,7 +3,7 @@ import { auth } from "@clerk/nextjs/server";
 
 const CreateEvent = () => {
   
-  const userId = "kdasjfkdh"
+  const userId = "67614bc8ac89c19627aec41a"
  
   return (
     <>
