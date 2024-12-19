@@ -2,8 +2,8 @@ import EventForm from "@/components/shared/EventForm";
 import { auth } from "@clerk/nextjs/server";
 
 const CreateEvent = () => {
-  
-  const userId = "676059481487b9b97c1cf829"
+
+  const userId = "67614bc8ac89c19627aec41a"
  
   return (
     <>
