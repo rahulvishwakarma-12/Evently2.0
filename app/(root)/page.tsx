@@ -1,6 +1,7 @@
 // import CategoryFilter from '@/components/shared/CategoryFilter';
 // import Collection from '@/components/shared/Collection'
 // import Search from '@/components/shared/Search';
+import Collection from '@/components/shared/Collection';
 import { Button } from '@/components/ui/button'
 import { getAllEvents } from '@/lib/actions/event.actions';
 // import { SearchParamProps } from '@/types';
@@ -34,7 +35,7 @@ export default async function Home() {
           </div>
 
           <Image 
-            src="/assets/images/hero.png"
+            src="/assets/images/hero.jpg"
             alt="hero"
             width={1000}
             height={1000}
@@ -50,16 +51,7 @@ export default async function Home() {
           {/* <Search /> */}
           {/* <CategoryFilter /> */}
         </div>
-
-        {/* <Collection  */}
-          {/* data={events?.data}
-          emptyTitle="No Events Found"
-          emptyStateSubtext="Come back later"
-          collectionType="All_Events"
-          limit={6}
-          page={page}
-          totalPages={events?.totalPages} */}
-        {/* /> */}
+        
       </section>
     </>
   )
